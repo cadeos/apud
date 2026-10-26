@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use apud, please cite it as below."
+title: "apud: IIIF-grounded, citable vision for historical documents"
+type: software
+authors:
+  - given-names: Carmine
+    family-names: De Stefano
+    alias: cadeos
+repository-code: "https://github.com/cadeos/apud"
+license: Apache-2.0
+version: 0.0.1
+keywords:
+  - IIIF
+  - handwritten text recognition
+  - manuscripts
+  - vision-language models
+  - web annotation
+  - digital humanities

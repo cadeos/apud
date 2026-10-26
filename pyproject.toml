@@ -1,0 +1,30 @@
+[project]
+name = "apud-workspace"
+version = "0"
+requires-python = ">=3.11"
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+apud = { workspace = true }
+apud-mcp = { workspace = true }
+
+[dependency-groups]
+dev = ["apud", "apud-mcp", "pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["apud", "apud_mcp", "samples"]
+
+[tool.pytest.ini_options]
+testpaths = ["packages/core/tests", "packages/mcp/tests"]
