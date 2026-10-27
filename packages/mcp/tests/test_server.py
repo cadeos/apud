@@ -44,6 +44,8 @@ def test_view_region_maps_canvas_to_image(server):
 
 
 def test_annotate_transcription(server):
-    result = server.annotate_transcription(MANIFEST_URL, CANVAS, 10, 20, 300, 40, "Nel mezzo", "it")
+    result = server.annotate_transcription(
+        MANIFEST_URL, CANVAS, 10, 20, 300, 40, "In principio", "la"
+    )
     assert result["annotation"]["target"]["selector"]["value"] == "xywh=10,20,300,40"
     assert result["content_state"]

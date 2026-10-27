@@ -12,14 +12,14 @@ MANIFEST = "https://iiif.example.org/manifest.json"
 
 def test_transcription_annotation_targets_canvas_fragment():
     anno = transcription_annotation(
-        "urn:a1", CANVAS, MANIFEST, Region(1, 2, 3, 4), "Nel mezzo", language="it"
+        "urn:a1", CANVAS, MANIFEST, Region(1, 2, 3, 4), "In principio", language="la"
     )
     assert anno["motivation"] == "supplementing"
     assert anno["body"] == {
         "type": "TextualBody",
-        "value": "Nel mezzo",
+        "value": "In principio",
         "format": "text/plain",
-        "language": "it",
+        "language": "la",
     }
     assert anno["target"]["source"]["id"] == CANVAS
     assert anno["target"]["source"]["partOf"] == [{"id": MANIFEST, "type": "Manifest"}]
