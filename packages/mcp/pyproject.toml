@@ -1,12 +1,12 @@
 [project]
 name = "apud-mcp"
-version = "0.0.1"
+version = "0.0.2"
 description = "MCP server exposing apud: IIIF-grounded, citable vision for historical documents"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
 authors = [{ name = "cadeos" }]
-dependencies = ["apud", "mcp>=2.3"]
+dependencies = ["apud>=0.0.2", "mcp>=2.3"]
 
 [project.scripts]
 apud-mcp = "apud_mcp.server:main"

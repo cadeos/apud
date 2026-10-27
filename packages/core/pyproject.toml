@@ -1,6 +1,6 @@
 [project]
 name = "apud"
-version = "0.0.1"
+version = "0.0.2"
 description = "IIIF-grounded, citable vision for historical documents: region crops for VLMs, W3C annotations out"
 readme = "README.md"
 requires-python = ">=3.11"

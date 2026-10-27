@@ -38,7 +38,7 @@ wheels = [
 
 [[package]]
 name = "apud"
-version = "0.0.1"
+version = "0.0.2"
 source = { editable = "packages/core" }
 dependencies = [
     { name = "httpx" },
@@ -53,7 +53,7 @@ requires-dist = [
 
 [[package]]
 name = "apud-mcp"
-version = "0.0.1"
+version = "0.0.2"
 source = { editable = "packages/mcp" }
 dependencies = [
     { name = "apud" },
