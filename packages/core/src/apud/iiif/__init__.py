@@ -1,4 +1,12 @@
-from apud.iiif.image import ImageService, Region, RegionRequest, UnsupportedRequest, parse_info
+from apud.iiif.image import (
+    ImageService,
+    Region,
+    RegionRequest,
+    Tile,
+    TileSpec,
+    UnsupportedRequest,
+    parse_info,
+)
 from apud.iiif.manifest import (
     Canvas,
     Manifest,
@@ -13,6 +21,8 @@ __all__ = [
     "Manifest",
     "Region",
     "RegionRequest",
+    "Tile",
+    "TileSpec",
     "UnsupportedRequest",
     "canvas_to_image",
     "image_to_canvas",

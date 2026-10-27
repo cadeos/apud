@@ -47,8 +47,9 @@ def test_region_is_clamped_to_image(v3_info):
     assert request.region == Region(3900, 5900, 100, 100)
 
 
-def test_level0_rejects_regions(v3_info):
+def test_level0_without_tiles_or_sizes_is_unsupported(v3_info):
     v3_info["profile"] = "level0"
+    del v3_info["sizes"]
     with pytest.raises(UnsupportedRequest):
         parse_info(v3_info).region_request(Region(0, 0, 10, 10), max_side=100)
 

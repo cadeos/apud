@@ -82,7 +82,7 @@ def view_region(
                 f"canvas_x = {x} + crop_x * {canvas_per_crop_px:.4f}; "
                 f"canvas_y = {y} + crop_y * {canvas_per_crop_px:.4f}"
             ),
-            "source_url": request.url,
+            "source_urls": request.urls,
         },
     ]
 

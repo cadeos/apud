@@ -39,7 +39,9 @@ def test_describe_manifest(server):
 def test_view_region_maps_canvas_to_image(server):
     image, meta = server.view_region(MANIFEST_URL, CANVAS, 100, 100, 500, 250, max_side=500)
     # canvas 2000x3000 -> image 4000x6000, so the image region is doubled and then halved to fit
-    assert meta["source_url"].endswith("/200,200,1000,500/500,250/0/default.jpg")
+    assert meta["source_urls"] == [
+        "https://iiif.example.org/iiif/3/page1/200,200,1000,500/500,250/0/default.jpg"
+    ]
     assert meta["to_canvas"] == "canvas_x = 100 + crop_x * 1.0000; canvas_y = 100 + crop_y * 1.0000"
 
 

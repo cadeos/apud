@@ -7,7 +7,9 @@ report, and their answers cannot be checked by a scholar. `apud` sits between II
 and models:
 
 - fetches canvas regions from any IIIF Image API server at the best resolution the server and
-  the model allow (Image API v2/v3, Presentation v2/v3, lenient parsing of real-world manifests);
+  the model allow (Image API v2/v3, Presentation v2/v3, lenient parsing of real-world manifests),
+  including **Level 0** static servers, where the region is stitched from the covering tiles
+  (or cut from the closest declared size) on the client;
 - keeps every model output anchored to **canvas coordinates**, even when the served image size
   differs from the canvas;
 - emits **W3C Web Annotations** (`xywh` fragment selectors) and **IIIF Content State** links, so
